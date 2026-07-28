@@ -1,16 +1,4 @@
-/* TEST: prove the custom CSS is loading */
-
-.controller.xbox.edit {
-    filter:
-        drop-shadow(0 0 12px #54C3EA)
-        drop-shadow(0 0 24px #54C3EA) !important;
-}
-
-.xbox.edit .button.pressed,
-.xbox.edit .stick.pressed,
-.xbox.edit .face.pressed,
-.xbox.edit .bumper.pressed {
-    filter:
-        drop-shadow(0 0 8px #54C3EA)
-        brightness(2) !important;
+.edit {
+    filter: drop-shadow(0 0 30px #54C3EA) !important;
+    -webkit-filter: drop-shadow(0 0 30px #54C3EA) !important;
 }
