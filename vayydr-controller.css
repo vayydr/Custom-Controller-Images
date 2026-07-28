@@ -1,0 +1,148 @@
+/* =========================================
+   VAYYDR - GAMEPAD VIEWER XBOX EDIT
+   Brand blue: #54C3EA
+   ========================================= */
+
+
+/* ---------- GENERAL ---------- */
+
+.edit {
+    /* Keeps the base Xbox skin intact */
+}
+
+
+/* ---------- ABXY BUTTON PRESSES ---------- */
+
+/*
+   Give pressed face buttons a Vayydr blue glow.
+   We keep the original button artwork underneath.
+*/
+
+.edit .button.pressed {
+    filter:
+        drop-shadow(0 0 3px #54C3EA)
+        drop-shadow(0 0 7px #54C3EA)
+        brightness(1.35)
+        saturate(0);
+}
+
+
+/* ---------- ANALOGUE STICKS ---------- */
+
+.edit .stick {
+    filter: grayscale(1);
+}
+
+.edit .stick.pressed {
+    filter:
+        grayscale(1)
+        drop-shadow(0 0 3px #54C3EA)
+        drop-shadow(0 0 7px #54C3EA)
+        brightness(1.25);
+}
+
+
+/* ---------- D-PAD ---------- */
+
+.edit .face {
+    filter: grayscale(1);
+}
+
+.edit .face.pressed {
+    filter:
+        grayscale(1)
+        drop-shadow(0 0 3px #54C3EA)
+        drop-shadow(0 0 7px #54C3EA)
+        brightness(1.4);
+}
+
+
+/* ---------- BUMPERS ---------- */
+
+.edit .bumper {
+    filter: grayscale(1);
+}
+
+.edit .bumper.pressed {
+    filter:
+        grayscale(1)
+        drop-shadow(0 0 4px #54C3EA)
+        brightness(1.4);
+}
+
+
+/* ---------- TRIGGERS ---------- */
+
+.edit .trigger {
+    filter:
+        grayscale(1)
+        drop-shadow(0 0 3px #54C3EA);
+}
+
+
+/* ---------- MENU / VIEW BUTTONS ---------- */
+
+.edit .start,
+.edit .back {
+    filter: grayscale(1);
+}
+
+.edit .start.pressed,
+.edit .back.pressed {
+    filter:
+        grayscale(1)
+        drop-shadow(0 0 4px #54C3EA)
+        brightness(1.5);
+}
+
+
+/* ---------- CENTRE V LOGO ---------- */
+
+/*
+   This creates a V logo over the Xbox guide area.
+
+   IMPORTANT:
+   Replace the URL below with the RAW GitHub URL
+   for your neutral V PNG.
+*/
+
+.edit::after {
+    content: "";
+    position: absolute;
+
+    width: 54px;
+    height: 54px;
+
+    /*
+       Approximate centre position for the Xbox One skin.
+       We can fine-tune this after you show me the result.
+    */
+    left: 50%;
+    top: 118px;
+
+    transform: translateX(-50%);
+
+    background-image:
+        url("YOUR-RAW-NEUTRAL-V-IMAGE-URL-HERE");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    z-index: 999;
+
+    pointer-events: none;
+}
+
+
+/* ---------- OPTIONAL BLUE CONTROLLER GLOW ---------- */
+
+/*
+   Very subtle brand accent around the controller.
+   Remove this block if you prefer completely flat styling.
+*/
+
+.edit {
+    filter:
+        drop-shadow(0 0 2px rgba(84, 195, 234, 0.35));
+}
